@@ -1,7 +1,7 @@
 import createBareServer from "@tomphttp/bare-server-node";
 import express from "express";
 import { createServer } from "node:http";
-import { spadiumPath } from "spadium";
+import { spadiumPath } from "spadium/static";
 import { hostname } from "node:os";
 import { fileURLToPath } from "node:url";
 
