@@ -1,32 +1,32 @@
 "use strict";
 
 /**
- * @type {HTMLFormElement}
+ * @type {HTMLFormElemen|null}
  */
 const form = document.getElementById("form");
+if (!form) throw new TypeError("Unable to find element with ID 'form'");
 /**
- * @type {HTMLInputElement}
+ * @type {HTMLInputElement|null}
  */
 const address = document.getElementById("address");
+if (!address) throw new TypeError("Unable to find element with ID 'address'");
 /**
- * @type {HTMLInputElement}
+ * @type {HTMLInputElement|null}
  */
 const searchEngine = document.getElementById("search-engine");
-/**
- * @type {HTMLDivElement}
- */
-const examples = document.getElementById("examples");
-/**
- * @type {HTMLElement}
- */
+if (!searchEngine)
+  throw new TypeError("Unable to find element with ID 'search-engine'");
+const example = document.getElementById("example");
+if (!example) throw new TypeError("Unable to find element with ID 'example'");
 const main = document.getElementById("main");
+if (!main) throw new TypeError("Unable to find element with ID 'main'");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const url = search(address.value, searchEngine.value);
 
   // free up some memory
-  examples.remove();
+  example.remove();
 
   main.src = url;
   main.hidden = false;
