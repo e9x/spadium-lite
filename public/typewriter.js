@@ -1,4 +1,5 @@
 /*global Typewriter*/
+"use strict";
 
 new Typewriter(document.getElementById("def"), {
   strings: [

@@ -8,25 +8,33 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.19.0/core.min.js"
       defer
     ></script>
-    <script src="index.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="form.js" defer></script>
+    <script src="typewriter.js" defer></script>
   </head>
   <body>
     <h1>Spadium</h1>
     <p>The tool for <span id="def"></span></p>
     <hr />
     <h3>Settings</h3>
-    <form>
+    <spadium-proxy server="/bare/" id="main" hidden></spadium-proxy>
+    <form id="form">
+      <input
+        id="search-engine"
+        value="https://www.google.com/search?q=%s"
+        type="hidden"
+      />
       <label>
-        URL:
+        Address:
         <br />
-        <input value="https://www.google.com/" />
+        <input value="https://www.google.com/" id="address" />
       </label>
       <hr />
       <input type="submit" value="Go" />
     </form>
     <hr />
     <h3>Examples</h3>
-    <div class="examples">
+    <div id="examples">
       <spadium-proxy
         src="https://www.businessinsider.com/sai"
         server="/bare/"
