@@ -1,0 +1,24 @@
+{
+  "name": "spadium-lite",
+  "version": "1.0.0",
+  "description": "Spadium Lite is a lightweight demonstration of the Spadium library, showing how it can be integrated into a single page application to render websites locally without external requests.",
+  "author": {
+    "name": "David Reed",
+    "url": "https://github.com/e9x"
+  },
+  "license": "ISC",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "prettier": "^2.8.1"
+  },
+  "dependencies": {
+    "@tomphttp/bare-server-node": "^1.2.2",
+    "express": "^4.18.2",
+    "spadium": "file:../spadium"
+  }
+}
