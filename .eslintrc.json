@@ -4,5 +4,9 @@
     "browser": true,
     "es6": true
   },
-  "parserOptions": { "sourceType": "module" }
+  "parserOptions": { "sourceType": "module" },
+  "rules": {
+    "no-undef": "off",
+    "no-unused-vars": "off"
+  }
 }
