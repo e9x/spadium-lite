@@ -6,5 +6,19 @@ const examples = [
   "https://www.google.com/",
 ];
 
+/**
+ * @type {HTMLInputElement|null}
+ */
+const hideExample = document.getElementById("hide-example");
+if (!hideExample)
+  throw new TypeError("Unable to find element with ID 'hideExample'");
+hideExample.checked = localStorage.getItem("hideExample") === "1";
+
+hideExample.addEventListener("click", () => {
+  localStorage.setItem("hideExample", hideExample.checked ? "1" : "0");
+  location.reload();
+});
+
 // example is defined in form.js
-example.src = examples[~~(Math.random() * examples.length)];
+if (!hideExample.checked)
+  example.src = examples[~~(Math.random() * examples.length)];
