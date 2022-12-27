@@ -12,10 +12,10 @@ const examples = [
 const hideExample = document.getElementById("hide-example");
 if (!hideExample)
   throw new TypeError("Unable to find element with ID 'hideExample'");
-hideExample.checked = localStorage.getItem("hideExample") === "1";
+hideExample.checked = localStorage.hideExample === "1";
 
 hideExample.addEventListener("click", () => {
-  localStorage.setItem("hideExample", hideExample.checked ? "1" : "0");
+  localStorage.hideExample = hideExample.checked ? "1" : "0";
   location.reload();
 });
 
